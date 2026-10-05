@@ -1,104 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search | FindBack</title>
 
-<head>
+<link rel="stylesheet" href="style.css">
 
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Search | FindBack</title>
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-</head>
-
-<body>
-
-<header class="navbar">
-
-  <div class="logo">
+</head> <body> <header class="navbar">
+<div class="logo">
     Find<span>Back</span>
-  </div>
+</div>
 
-  <a href="dashboard.html">
-    Dashboard
-  </a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="report.html">Report Item</a>
+    <a href="search.html" class="active">Search</a>
+</nav>
 
-</header>
-
-
-<main class="search-page">
-
-  <div class="page-heading">
+</header> <main class="search-page">
+<section class="page-heading">
 
     <p class="eyebrow">
-      FIND SOMETHING
+        FIND SOMETHING
     </p>
 
     <h1>
-      Search Lost & Found Items
+        Search Lost & Found Items
     </h1>
 
-  </div>
+    <p>
+        Search by item name, location,
+        category or description.
+    </p>
+
+</section>
 
 
-  <div class="search-box">
+<section class="search-box">
 
     <input
-      id="searchInput"
-      type="text"
-      placeholder="Search item, location or category..."
+        id="searchInput"
+        type="text"
+        placeholder="Search item, location or category..."
     >
+
 
     <select id="searchType">
 
-      <option value="all">
-        All Items
-      </option>
+        <option value="all">
+            All Items
+        </option>
 
-      <option value="lost">
-        Lost
-      </option>
+        <option value="lost">
+            Lost
+        </option>
 
-      <option value="found">
-        Found
-      </option>
+        <option value="found">
+            Found
+        </option>
 
     </select>
 
+
     <button
-      id="searchButton"
-      class="primary-btn"
+        id="searchButton"
+        class="primary-btn"
     >
-      Search
+        🔍 Search
     </button>
 
-  </div>
+</section>
 
 
-  <div
-    id="searchResults"
-    class="reports"
-  >
+<section>
 
-    <p class="empty">
-      Search for an item to begin.
-    </p>
+    <div class="results-header">
 
-  </div>
+        <h2>
+            Results
+        </h2>
 
-</main>
+        <span id="resultCount">
+            0 items
+        </span>
+
+    </div>
 
 
-<script type="module" src="app.js"></script>
+    <div
+        id="searchResults"
+        class="reports"
+    >
 
-</body>
+        <div class="empty">
 
-</html>
+            <div class="empty-icon">
+                🔎
+            </div>
+
+            <h3>
+                Search for an item
+            </h3>
+
+            <p>
+                Enter a keyword to search reports.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main> <footer> <p> FindBack — Cloud-Based Lost & Found System </p> </footer> <script src="script.js"></script> </body> </html>
