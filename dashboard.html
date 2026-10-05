@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dashboard | FindBack</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    Find<span>Back</span>
+  </div>
+
+  <nav>
+
+    <a href="dashboard.html">
+      Dashboard
+    </a>
+
+    <a href="report.html">
+      Report
+    </a>
+
+    <a href="search.html">
+      Search
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main class="dashboard">
+
+  <div class="page-heading">
+
+    <p class="eyebrow">
+      YOUR SPACE
+    </p>
+
+    <h1>
+      Lost & Found Dashboard
+    </h1>
+
+    <p>
+      Manage your reports and discover
+      possible matches.
+    </p>
+
+  </div>
+
+
+  <section class="stats">
+
+    <div class="stat-card">
+
+      <span>
+        LOST ITEMS
+      </span>
+
+      <strong id="lostCount">
+        0
+      </strong>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <span>
+        FOUND ITEMS
+      </span>
+
+      <strong id="foundCount">
+        0
+      </strong>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <span>
+        POTENTIAL MATCHES
+      </span>
+
+      <strong id="matchCount">
+        0
+      </strong>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <span>
+        RETURNED
+      </span>
+
+      <strong id="returnedCount">
+        0
+      </strong>
+
+    </div>
+
+  </section>
+
+
+  <section class="dashboard-actions">
+
+    <a
+      href="report.html?type=lost"
+      class="action-card"
+    >
+
+      <span>🔍</span>
+
+      <h3>
+        Report Lost Item
+      </h3>
+
+      <p>
+        Tell us what you lost.
+      </p>
+
+    </a>
+
+
+    <a
+      href="report.html?type=found"
+      class="action-card"
+    >
+
+      <span>📦</span>
+
+      <h3>
+        Report Found Item
+      </h3>
+
+      <p>
+        Help someone find their item.
+      </p>
+
+    </a>
+
+
+    <a
+      href="search.html"
+      class="action-card"
+    >
+
+      <span>🎯</span>
+
+      <h3>
+        Search Items
+      </h3>
+
+      <p>
+        Find potential matches.
+      </p>
+
+    </a>
+
+  </section>
+
+
+  <section>
+
+    <div class="section-heading">
+
+      <h2>
+        Recent Reports
+      </h2>
+
+    </div>
+
+    <div
+      id="recentReports"
+      class="reports"
+    >
+
+      <p class="empty">
+        Loading reports...
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<script type="module" src="app.js"></script>
+
+</body>
+
+</html>
