@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Report Item | FindBack</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    Find<span>Back</span>
+  </div>
+
+  <a href="dashboard.html">
+    Dashboard
+  </a>
+
+</header>
+
+
+<main class="form-page">
+
+  <div class="page-heading">
+
+    <p class="eyebrow">
+      CREATE REPORT
+    </p>
+
+    <h1>
+      Report an Item
+    </h1>
+
+    <p>
+      Provide as much information as possible
+      to improve matching.
+    </p>
+
+  </div>
+
+
+  <form id="itemForm">
+
+    <div class="form-group">
+
+      <label>
+        REPORT TYPE
+      </label>
+
+      <select id="type" required>
+
+        <option value="lost">
+          I Lost This Item
+        </option>
+
+        <option value="found">
+          I Found This Item
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-grid">
+
+      <div class="form-group">
+
+        <label>
+          ITEM NAME
+        </label>
+
+        <input
+          id="itemName"
+          type="text"
+          placeholder="Black Wallet"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>
+          CATEGORY
+        </label>
+
+        <select id="category" required>
+
+          <option value="">
+            Select category
+          </option>
+
+          <option>
+            Electronics
+          </option>
+
+          <option>
+            Wallet
+          </option>
+
+          <option>
+            Keys
+          </option>
+
+          <option>
+            Documents
+          </option>
+
+          <option>
+            Bag
+          </option>
+
+          <option>
+            Clothing
+          </option>
+
+          <option>
+            Jewellery
+          </option>
+
+          <option>
+            Other
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>
+        DESCRIPTION
+      </label>
+
+      <textarea
+        id="description"
+        rows="5"
+        placeholder="Describe identifying features..."
+        required
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-grid">
+
+      <div class="form-group">
+
+        <label>
+          COLOR
+        </label>
+
+        <input
+          id="color"
+          type="text"
+          placeholder="Black"
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>
+          LOCATION
+        </label>
+
+        <input
+          id="location"
+          type="text"
+          placeholder="College Library"
+          required
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>
+        DATE
+      </label>
+
+      <input
+        id="date"
+        type="date"
+        required
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label>
+        ITEM IMAGE
+      </label>
+
+      <input
+        id="image"
+        type="file"
+        accept="image/*"
+      >
+
+      <small>
+        JPG, PNG or WEBP recommended.
+      </small>
+
+    </div>
+
+
+    <button
+      type="submit"
+      class="primary-btn full"
+    >
+      Submit Report
+    </button>
+
+  </form>
+
+</main>
+
+
+<script type="module" src="app.js"></script>
+
+</body>
+
+</html>
