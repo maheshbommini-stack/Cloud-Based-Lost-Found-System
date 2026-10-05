@@ -6,7 +6,7 @@
     content="width=device-width, initial-scale=1.0"
 >
 
-<title>Dashboard | FindBack</title>
+<title>Report Item | FindBack</title>
 
 <link
     rel="stylesheet"
@@ -28,14 +28,14 @@
             Home
         </a>
 
-        <a
-            href="dashboard.html"
-            class="active"
-        >
+        <a href="dashboard.html">
             Dashboard
         </a>
 
-        <a href="report.html">
+        <a
+            href="report.html"
+            class="active"
+        >
             Report Item
         </a>
 
@@ -48,247 +48,242 @@
 </header>
 
 
-<!-- DASHBOARD -->
+<!-- REPORT FORM -->
 
-<main class="dashboard">
+<main class="form-page">
 
     <section class="page-heading">
 
         <p class="eyebrow">
-            YOUR SPACE
+            CREATE REPORT
         </p>
 
         <h1>
-            Lost & Found Dashboard
+            Report an Item
         </h1>
 
         <p>
-            Manage lost and found reports
-            and discover possible matches.
+            Provide details about the item to
+            help us find a potential match.
         </p>
 
     </section>
 
 
-    <!-- STATISTICS -->
-
-    <section class="stats">
-
-        <div class="stat-card">
-
-            <div class="stat-icon">
-                🔍
-            </div>
-
-            <div>
-
-                <span>
-                    LOST ITEMS
-                </span>
-
-                <strong id="lostCount">
-                    0
-                </strong>
-
-            </div>
-
-        </div>
+    <form id="itemForm">
 
 
-        <div class="stat-card">
+        <!-- REPORT TYPE -->
 
-            <div class="stat-icon">
-                📦
-            </div>
+        <div class="form-group">
 
-            <div>
+            <label for="type">
+                REPORT TYPE
+            </label>
 
-                <span>
-                    FOUND ITEMS
-                </span>
-
-                <strong id="foundCount">
-                    0
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <div class="stat-card">
-
-            <div class="stat-icon">
-                🎯
-            </div>
-
-            <div>
-
-                <span>
-                    POTENTIAL MATCHES
-                </span>
-
-                <strong id="matchCount">
-                    0
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <div class="stat-card">
-
-            <div class="stat-icon">
-                ✅
-            </div>
-
-            <div>
-
-                <span>
-                    RETURNED
-                </span>
-
-                <strong id="returnedCount">
-                    0
-                </strong>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- QUICK ACTIONS -->
-
-    <section class="dashboard-actions">
-
-        <a
-            href="report.html?type=lost"
-            class="action-card"
-        >
-
-            <div class="action-icon">
-                🔍
-            </div>
-
-            <h3>
-                Report Lost Item
-            </h3>
-
-            <p>
-                Tell us about something
-                you have lost.
-            </p>
-
-        </a>
-
-
-        <a
-            href="report.html?type=found"
-            class="action-card"
-        >
-
-            <div class="action-icon">
-                📦
-            </div>
-
-            <h3>
-                Report Found Item
-            </h3>
-
-            <p>
-                Help someone recover
-                their lost item.
-            </p>
-
-        </a>
-
-
-        <a
-            href="search.html"
-            class="action-card"
-        >
-
-            <div class="action-icon">
-                🎯
-            </div>
-
-            <h3>
-                Search Items
-            </h3>
-
-            <p>
-                Search through lost
-                and found reports.
-            </p>
-
-        </a>
-
-    </section>
-
-
-    <!-- RECENT REPORTS -->
-
-    <section class="recent-section">
-
-        <div class="section-heading">
-
-            <div>
-
-                <p class="eyebrow">
-                    ACTIVITY
-                </p>
-
-                <h2>
-                    Recent Reports
-                </h2>
-
-            </div>
-
-            <a
-                href="search.html"
-                class="view-all"
+            <select
+                id="type"
+                required
             >
-                View All →
-            </a>
+
+                <option value="lost">
+                    I Lost This Item
+                </option>
+
+                <option value="found">
+                    I Found This Item
+                </option>
+
+            </select>
 
         </div>
 
+
+        <!-- NAME + CATEGORY -->
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label for="itemName">
+                    ITEM NAME
+                </label>
+
+                <input
+                    id="itemName"
+                    type="text"
+                    placeholder="Example: Black Wallet"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="category">
+                    CATEGORY
+                </label>
+
+                <select
+                    id="category"
+                    required
+                >
+
+                    <option value="">
+                        Select category
+                    </option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                    <option value="Wallet">
+                        Wallet
+                    </option>
+
+                    <option value="Keys">
+                        Keys
+                    </option>
+
+                    <option value="Documents">
+                        Documents
+                    </option>
+
+                    <option value="Bag">
+                        Bag
+                    </option>
+
+                    <option value="Clothing">
+                        Clothing
+                    </option>
+
+                    <option value="Jewellery">
+                        Jewellery
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="form-group">
+
+            <label for="description">
+                DESCRIPTION
+            </label>
+
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Describe the item and any identifying features..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- COLOR + LOCATION -->
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label for="color">
+                    COLOR
+                </label>
+
+                <input
+                    id="color"
+                    type="text"
+                    placeholder="Example: Black"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="location">
+                    LOCATION
+                </label>
+
+                <input
+                    id="location"
+                    type="text"
+                    placeholder="Example: College Library"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- DATE -->
+
+        <div class="form-group">
+
+            <label for="date">
+                DATE
+            </label>
+
+            <input
+                id="date"
+                type="date"
+                required
+            >
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div class="form-group">
+
+            <label for="image">
+                ITEM IMAGE
+            </label>
+
+            <input
+                id="image"
+                type="file"
+                accept="image/png, image/jpeg, image/webp"
+            >
+
+            <small>
+                Optional. JPG, PNG or WEBP recommended.
+            </small>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <button
+            type="submit"
+            class="primary-btn full"
+        >
+            Submit Report
+        </button>
+
+
+        <!-- MESSAGE -->
 
         <div
-            id="recentReports"
-            class="reports"
-        >
+            id="formMessage"
+            class="form-message"
+        ></div>
 
-            <div class="empty">
-
-                <div class="empty-icon">
-                    📋
-                </div>
-
-                <h3>
-                    No reports yet
-                </h3>
-
-                <p>
-                    Your recent lost and found
-                    reports will appear here.
-                </p>
-
-                <a
-                    href="report.html"
-                    class="primary-btn"
-                >
-                    Create First Report
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+    </form>
 
 </main>
 
@@ -303,8 +298,6 @@
 
 </footer>
 
-
-<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
