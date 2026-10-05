@@ -1,213 +1,311 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <html lang="en"> <head>
+<meta charset="UTF-8">
 
-<head>
-
-  <meta charset="UTF-8">
-
-  <meta
+<meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  >
+>
 
-  <title>Dashboard | FindBack</title>
+<title>Dashboard | FindBack</title>
 
-  <link
+<link
     rel="stylesheet"
     href="style.css"
-  >
+>
 
-</head>
-
-<body>
+</head> <body>
+<!-- NAVBAR -->
 
 <header class="navbar">
 
-  <div class="logo">
-    Find<span>Back</span>
-  </div>
+    <div class="logo">
+        Find<span>Back</span>
+    </div>
 
-  <nav>
+    <nav>
 
-    <a href="dashboard.html">
-      Dashboard
-    </a>
+        <a href="index.html">
+            Home
+        </a>
 
-    <a href="report.html">
-      Report
-    </a>
+        <a
+            href="dashboard.html"
+            class="active"
+        >
+            Dashboard
+        </a>
 
-    <a href="search.html">
-      Search
-    </a>
+        <a href="report.html">
+            Report Item
+        </a>
 
-  </nav>
+        <a href="search.html">
+            Search
+        </a>
+
+    </nav>
 
 </header>
 
 
+<!-- DASHBOARD -->
+
 <main class="dashboard">
 
-  <div class="page-heading">
+    <section class="page-heading">
 
-    <p class="eyebrow">
-      YOUR SPACE
-    </p>
+        <p class="eyebrow">
+            YOUR SPACE
+        </p>
 
-    <h1>
-      Lost & Found Dashboard
-    </h1>
+        <h1>
+            Lost & Found Dashboard
+        </h1>
 
-    <p>
-      Manage your reports and discover
-      possible matches.
-    </p>
+        <p>
+            Manage lost and found reports
+            and discover possible matches.
+        </p>
 
-  </div>
-
-
-  <section class="stats">
-
-    <div class="stat-card">
-
-      <span>
-        LOST ITEMS
-      </span>
-
-      <strong id="lostCount">
-        0
-      </strong>
-
-    </div>
+    </section>
 
 
-    <div class="stat-card">
+    <!-- STATISTICS -->
 
-      <span>
-        FOUND ITEMS
-      </span>
+    <section class="stats">
 
-      <strong id="foundCount">
-        0
-      </strong>
+        <div class="stat-card">
 
-    </div>
+            <div class="stat-icon">
+                🔍
+            </div>
 
+            <div>
 
-    <div class="stat-card">
+                <span>
+                    LOST ITEMS
+                </span>
 
-      <span>
-        POTENTIAL MATCHES
-      </span>
+                <strong id="lostCount">
+                    0
+                </strong>
 
-      <strong id="matchCount">
-        0
-      </strong>
+            </div>
 
-    </div>
-
-
-    <div class="stat-card">
-
-      <span>
-        RETURNED
-      </span>
-
-      <strong id="returnedCount">
-        0
-      </strong>
-
-    </div>
-
-  </section>
+        </div>
 
 
-  <section class="dashboard-actions">
+        <div class="stat-card">
 
-    <a
-      href="report.html?type=lost"
-      class="action-card"
-    >
+            <div class="stat-icon">
+                📦
+            </div>
 
-      <span>🔍</span>
+            <div>
 
-      <h3>
-        Report Lost Item
-      </h3>
+                <span>
+                    FOUND ITEMS
+                </span>
 
-      <p>
-        Tell us what you lost.
-      </p>
+                <strong id="foundCount">
+                    0
+                </strong>
 
-    </a>
+            </div>
 
-
-    <a
-      href="report.html?type=found"
-      class="action-card"
-    >
-
-      <span>📦</span>
-
-      <h3>
-        Report Found Item
-      </h3>
-
-      <p>
-        Help someone find their item.
-      </p>
-
-    </a>
+        </div>
 
 
-    <a
-      href="search.html"
-      class="action-card"
-    >
+        <div class="stat-card">
 
-      <span>🎯</span>
+            <div class="stat-icon">
+                🎯
+            </div>
 
-      <h3>
-        Search Items
-      </h3>
+            <div>
 
-      <p>
-        Find potential matches.
-      </p>
+                <span>
+                    POTENTIAL MATCHES
+                </span>
 
-    </a>
+                <strong id="matchCount">
+                    0
+                </strong>
 
-  </section>
+            </div>
+
+        </div>
 
 
-  <section>
+        <div class="stat-card">
 
-    <div class="section-heading">
+            <div class="stat-icon">
+                ✅
+            </div>
 
-      <h2>
-        Recent Reports
-      </h2>
+            <div>
 
-    </div>
+                <span>
+                    RETURNED
+                </span>
 
-    <div
-      id="recentReports"
-      class="reports"
-    >
+                <strong id="returnedCount">
+                    0
+                </strong>
 
-      <p class="empty">
-        Loading reports...
-      </p>
+            </div>
 
-    </div>
+        </div>
 
-  </section>
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="dashboard-actions">
+
+        <a
+            href="report.html?type=lost"
+            class="action-card"
+        >
+
+            <div class="action-icon">
+                🔍
+            </div>
+
+            <h3>
+                Report Lost Item
+            </h3>
+
+            <p>
+                Tell us about something
+                you have lost.
+            </p>
+
+        </a>
+
+
+        <a
+            href="report.html?type=found"
+            class="action-card"
+        >
+
+            <div class="action-icon">
+                📦
+            </div>
+
+            <h3>
+                Report Found Item
+            </h3>
+
+            <p>
+                Help someone recover
+                their lost item.
+            </p>
+
+        </a>
+
+
+        <a
+            href="search.html"
+            class="action-card"
+        >
+
+            <div class="action-icon">
+                🎯
+            </div>
+
+            <h3>
+                Search Items
+            </h3>
+
+            <p>
+                Search through lost
+                and found reports.
+            </p>
+
+        </a>
+
+    </section>
+
+
+    <!-- RECENT REPORTS -->
+
+    <section class="recent-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    ACTIVITY
+                </p>
+
+                <h2>
+                    Recent Reports
+                </h2>
+
+            </div>
+
+            <a
+                href="search.html"
+                class="view-all"
+            >
+                View All →
+            </a>
+
+        </div>
+
+
+        <div
+            id="recentReports"
+            class="reports"
+        >
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    📋
+                </div>
+
+                <h3>
+                    No reports yet
+                </h3>
+
+                <p>
+                    Your recent lost and found
+                    reports will appear here.
+                </p>
+
+                <a
+                    href="report.html"
+                    class="primary-btn"
+                >
+                    Create First Report
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
 
-<script type="module" src="app.js"></script>
+<!-- FOOTER -->
 
-</body>
+<footer>
 
-</html>
+    <p>
+        FindBack — Cloud-Based Lost & Found System
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body> </html>
