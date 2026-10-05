@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Search | FindBack</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    Find<span>Back</span>
+  </div>
+
+  <a href="dashboard.html">
+    Dashboard
+  </a>
+
+</header>
+
+
+<main class="search-page">
+
+  <div class="page-heading">
+
+    <p class="eyebrow">
+      FIND SOMETHING
+    </p>
+
+    <h1>
+      Search Lost & Found Items
+    </h1>
+
+  </div>
+
+
+  <div class="search-box">
+
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search item, location or category..."
+    >
+
+    <select id="searchType">
+
+      <option value="all">
+        All Items
+      </option>
+
+      <option value="lost">
+        Lost
+      </option>
+
+      <option value="found">
+        Found
+      </option>
+
+    </select>
+
+    <button
+      id="searchButton"
+      class="primary-btn"
+    >
+      Search
+    </button>
+
+  </div>
+
+
+  <div
+    id="searchResults"
+    class="reports"
+  >
+
+    <p class="empty">
+      Search for an item to begin.
+    </p>
+
+  </div>
+
+</main>
+
+
+<script type="module" src="app.js"></script>
+
+</body>
+
+</html>
